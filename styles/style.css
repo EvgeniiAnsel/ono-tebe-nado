@@ -224,11 +224,6 @@ a {
     justify-content: space-between;
   }
   
-  .card-link {
-    display: block;
-    color: #ffffff;
-  }
-  
   .card {
     display: flex;
     flex-direction: column;
@@ -270,8 +265,6 @@ a {
     font-weight: 700;
     line-height: 26.4px;
     text-align: left;
-    text-transform: lowercase;
-    color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
     margin: 51px 40px 0px;
     text-decoration: underline;
@@ -296,6 +289,8 @@ a {
 
   .card-link {
     text-decoration: none;
+    display: block;
+    color: #ffffff;
   }
   
   .lots__look-more-link {
