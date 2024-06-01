@@ -11,31 +11,26 @@
   </head>
   <body class="body">
     <header class="header" id="header">
-      <div class="header__inner">
-        <nav aria-label="header__menu" class="header__menu">
-          <ul class="header__menu_links">
-            <li class="header__menu_links_list-item" id="main">главная</li>
-            <li class="header__menu_links_list-item">
-              <a class="header__menu_links-list" href="#lots">посмотреть лоты</a>
-            </li>
-            <li class="header__menu_links_list-item">
-              <a class="header__menu_links-list" href="#auction">об аукционе</a>
-            </li>
-          </ul>
-        </nav>
-        <a class="header__logo">
-          <img
-            class="header__logo_image"
-            src="./images/logo-black.svg"
-            alt="Логотип на белом фоне">
-        </a>
-        <div class="address header__addres">
-          <a href="tel:+99995555555">+9 999 555 5555</a>
-          <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-          <address class="header__addres">
-            наб. Принсенграхт 263- 265, Амстердам
-          </address>
-        </div>
+      <nav aria-label="header__menu" class="header__menu">
+        <ul class="header__menu_links">
+          <a class="header__menu_links_list-item" id="main">главная</a>
+          <li class="header__menu_links_list-item">
+            <a class="link" class="header__menu_links-list" href="#lots">посмотреть лоты</a>
+          </li>
+          <li class="header__menu_links_list-item">
+            <a class="link" class="header__menu_links-list" href="#auction">об аукционе</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="header__logo">
+        <img class="header__logo_image" src="./images/logo-black.svg" alt="Логотип на белом фоне">
+      </a>
+      <div class="address header__addres">
+        <a class="link" href="tel:+99995555555">+9 999 555 5555</a>
+        <a class="link" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+        <p class="header__addres">
+          наб. Принсенграхт 263- 265, Амстердам
+        </p>
       </div>
     </header>
     <main>
@@ -56,12 +51,10 @@
           </span>
         </h1>
         <div class="cover__description">
-          <span class="cover__description-text"
+          <p class="cover__description-text"
             >Аукцион вещей, в которые никто не верил
-          </span>
-          <div class="cover__description-btn">
-            <button type="button" class="bet-button">Сделать ставку</button>
-          </div>
+          </p>
+          <button type="button" class="bet-button">Сделать ставку</button>
         </div>
       </section>
       <section class="lots" id="lots">
@@ -73,10 +66,10 @@
               <h3 class="card__title">
                 Фильм режиссёра, который бросил киношколу
               </h3>
-              <span class="card__text"
+              <p class="card__text"
                 >Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
                 ставка, если бы вы не знали, что режиссёр — Пол Томас
-                Андерсон?</span>
+                Андерсон?</p>
             </article>
           </a>
           <a class="card-link" href="#0">
@@ -143,24 +136,23 @@
       </section>
     </main>
     <footer>
-      <div class="footer">
-        <div class="address">
-          <a href="tel:+99995555555">+9 999 555 5555</a>
-          <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-          <address class="header__address footer__menu-link">
+        <address class="address footer__address">
+          <a class="footer__address" href="tel:+99995555555">+9 999 555 5555</a>
+          <a class="footer__address" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+          <p class="footer__address">
             наб. Принсенграхт 263- 265, Амстердам
-          </address>
-        </div>
+          </p>
+        </address>
         <nav aria-label="footer__menu" class="footer__menu">
           <ul class="footer__menu-list">
             <li class="footer__menu-list-item">
-              <a href="#main">главная</a>
+              <a class="header__menu_links_list-item" id="main">главная</class=>
             </li>
             <li class="footer__menu-list-item">
-              <a href="#lots">посмотреть лоты</a>
+              <a class="link" href="#lots">посмотреть лоты</a>
             </li>
             <li class="footer__menu-list-item">
-              <a href="#auction">об аукционе</a>
+              <a class="link" href="#auction">об аукционе</a>
             </li>
           </ul>
         </nav>
@@ -180,28 +172,6 @@
               alt="pinterest">
           </a>
         </div>
-      </div>
-    </footer>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          const links = document.querySelectorAll('a[href^="#"]');
-      
-          for (const link of links) {
-              link.addEventListener('click', function(event) {
-                  event.preventDefault();
-                  const targetId = this.getAttribute('href').substring(1);
-                  const targetElement = document.getElementById(targetId);
-      
-                  if (targetElement) {
-                      window.scrollTo({
-                          top: targetElement.offsetTop,
-                          behavior: 'smooth'
-                      });
-                  }
-              });
-          }
-      });
-      </script>
-      
+    </footer>  
   </body>
 </html>
